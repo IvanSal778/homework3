@@ -1,0 +1,119 @@
+/* Author: Ivan Salinas */
+/* Created Date: 1/27/25*/
+/* Edited Date 3/24/25 */
+
+
+body {  
+    background-color: rgb(3, 69, 110);  
+    font-family: 'Times New Roman', Times, serif;  
+    color: rgb(255, 255, 255);  
+    position: relative;
+
+    
+   
+}
+
+h1{
+    background-color: aquamarine;
+    color: black;
+    margin: 0;
+    padding: 0;
+    
+    
+
+}
+
+p {  
+    font-weight: bolder;  
+}
+
+img {  
+    position: absolute;  
+    top: 0px;    
+    left: 0px;    
+    width: 100px !important;   
+    height: auto;
+}
+
+.checkBoxes{  
+    margin-right: 10px;   
+    vertical-align: middle; 
+    width: 50%;  
+}
+
+
+td label {  
+    margin-right: 5px;   
+}
+
+hr {  
+    border: 1px solid rgb(255, 0, 4);  
+    margin: 20px 0;  
+}
+#footer{
+    background-color: aquamarine;
+    color: black;
+    z-index: -1;
+    
+}
+
+#heart-icon {
+    position: relative;
+    bottom: 1%;
+    left: 93%;
+    width: 115px;        /* Set width */
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+input.valid {
+    border: 2px solid green;
+}
+
+#nameMessage {
+    display: inline-block;
+    width: 100%;  
+    word-wrap: break-word;
+}
+
+#dobErrorMessage{
+    display: inline-block;
+    width: 100%;  
+    word-wrap: break-word;
+}
+
+#addressOneMessage{
+    display: inline-block;
+    width: 100%;  
+    word-wrap: break-word;
+}
+
+
+
+/*.explainSymptoms{
+    width: 5%;
+
+}
+*/
+
+
+/*
+.pleaseExplainSymptoms{
+    width: 20% ;
+}
+*/
+
+
+td{
+    table-layout: auto;
+    width: 200px;
+    padding: 2px;
+    background-color: darkgray;
+}
+
+.error-message {
+    color: rgb(154, 2, 2);
+    font-weight:bold;
+}
