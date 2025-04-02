@@ -51,6 +51,8 @@ function checkMatch() {
 function validatePassword() {
     var password = document.getElementById("password").value;
     var message = document.getElementById("passwordMessage");
+    var username = document.getElementById("userName").value; 
+
     
     // At least 8 chars, 1 uppercase, 1 lowercase, and 1 number
     var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
@@ -58,16 +60,23 @@ function validatePassword() {
     if (password === "") {
         message.textContent = "";
         return false;
+    } else if (password === username){
+        message.textContent = "Password cannot be the same as the username!";
+        message.style.color = "red";
+        return false;
+
     } else if (strongRegex.test(password)) {
         message.textContent = "Strong password!";
         message.style.color = "green";
         return true;
-    } else {
+    } 
+    else {
         message.textContent = "Password must be at least 8 characters with uppercase, lowercase, and numbers";
         message.style.color = "red";
         return false;
     }
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var passwordField = document.getElementById("password");
@@ -77,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var uppercaseCheck = document.getElementById("uppercaseCheck");
     var lowercaseCheck = document.getElementById("lowercaseCheck");
     var numberCheck = document.getElementById("numberCheck");
+
 
     passwordField.addEventListener("focus", function() {
         checklist.style.display = "block"; // Shows up as the checklist when user focuses on the pasword box not the confirm password
@@ -100,6 +110,20 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //end of password validation checks
+
+//start of userName checks
+function checkUserName(){
+    var x= document.getElementById("userName").value;
+    var userNameMessage = document.getElementById("userNameMessage");
+
+    if(x.match(/^[A-Za-z][A-Za-z0-9]{4,19}$/)){
+        userNameMessage.innerHTML="";
+    }
+    else{
+        userNameMessage.innerHTML="User name must start with a letter and be at least 5 characters long but not longer than 20"
+    }
+}
+//end of userName checks
 
 //start of check for city
 function checkcity() {

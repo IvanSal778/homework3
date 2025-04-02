@@ -110,7 +110,7 @@ td{
     table-layout: auto;
     width: 200px;
     padding: 2px;
-    background-color: darkgray;
+    /*background-color: rgb(110, 108, 108);    I use this to see the box size at all times dont forget to disable and enable when working on the code    */
 }
 
 .error-message {

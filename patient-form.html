@@ -48,7 +48,7 @@
         pattern="/^[a-zA-Z\s'-]+$/"
         > 
 </td>
-<td> <span id="firstNameMessage" class="error-message"></span> </td>
+<td><span id="firstNameMessage" class="error-message"></span></td>
 
 </tr>
 
@@ -66,7 +66,7 @@
         pattern="[A-Za-z]" 
         >
     </td>
-    <td> <span id="middleNameMessage" class="error-message"></span> </td>
+    <td><span id="middleNameMessage" class="error-message"></span></td>
 
 </tr>
 <tr>
@@ -84,7 +84,7 @@
         required
         >
     </td>
-    <td> <span id="lastNameMessage" class="error-message"></span> </td>
+    <td><span id="lastNameMessage" class="error-message"></span></td>
 
 </tr>
 <tr> 
@@ -102,7 +102,7 @@
     oninvalid="this.setCustomValidity('check your date of birth.')"
     oninput="this.setCustomValidity('')"
     >
-    <td> <span id="dobErrorMessage" class="error-message"> </span></td>
+    <td><span id="dobErrorMessage" class="error-message"> </span></td>
 
 </tr>
 <tr>
@@ -135,7 +135,7 @@
         required
         >
     </td>
-    <td><span id="addressMessage" class="error-message"></span>
+    <td><span id="addressMessage" class="error-message"></span></td>
     </td>
 </tr>
     <tr>
@@ -153,7 +153,7 @@
         oninput="this.setCustomValidity('')"
         >
     </td>
-    <td><span id="addressTwoMessage"class="error-message" ></span>
+    <td><span id="addressTwoMessage"class="error-message" ></span></td>
 </tr>
 <tr>
     <td>City</td>
@@ -335,9 +335,14 @@
         placeholder="Enter Desired Username" 
         maxlength="50"
         id="userName"
+        onblur="checkUserName()"
+        oninvalid="this.setCustomValidity('please make a username')"
+        oninput="this.setCustomValidity('')"
     required
         >
     </td>
+    <td><span id="userNameMessage"class="error-message" ></span></td>
+
 </tr>
 
 
@@ -364,6 +369,8 @@
         name="password"
         placeholder="Enter Desired Password"
         id="password"  
+        onblur="validatePassword()"
+        oninput="validatePassword()"
         >
 
 <!-- This is from W3schools: an element to toggle between password visibility -->
@@ -396,7 +403,7 @@
             <li id="uppercaseCheck">✅ At least one uppercase letter</li>
             <li id="lowercaseCheck">✅ At least one lowercase letter</li>
             <li id="numberCheck">✅ At least one number</li>
-        </ul>
+         </ul>
 
     
 
