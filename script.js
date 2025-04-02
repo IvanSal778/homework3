@@ -114,10 +114,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //start of userName checks
 function checkUserName(){
     var x= document.getElementById("userName").value;
-    var userNameMessage = document.getElementById("userNameMessage");
+    var x= userNameMessage = document.getElementById("userNameMessage");
 
     if(x.match(/^[A-Za-z][A-Za-z0-9]{4,19}$/)){
-        userNameMessage.innerHTML="";
+        userNameMessage.innerHTML=" ";
     }
     else{
         userNameMessage.innerHTML="User name must start with a letter and be at least 5 characters long but not longer than 20"
